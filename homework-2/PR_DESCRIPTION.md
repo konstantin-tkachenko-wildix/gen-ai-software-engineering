@@ -62,17 +62,21 @@ Open `http://127.0.0.1:8000/` to browse/filter tickets, view classification, and
 
 ![Framework/storage decisions](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/prompt-2.png)
 
+![Verifying the upstream TASKS.md spec change](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/prompt-3.png)
+
+![Building the submit-homework-pr skill used for this PR](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/prompt-1.png)
+
 **Running application:**
 
 ![Ticket list with imported/classified tickets](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/ui.png)
 
 ![Ticket detail view with classification result](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/ui-2.png)
 
+![Filtered ticket list (priority=High, status=New)](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/ui-3.png)
+
 **Test coverage:**
 
 ![99% test coverage report](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/test_coverage.png)
-
-Also in `homework-2/docs/screenshots/`: `prompt-1.png` (building the PR skill), `prompt-3.png` (verifying the upstream spec change), `ui-3.png` (filtered list).
 
 ## Key Architecture Decisions
 
