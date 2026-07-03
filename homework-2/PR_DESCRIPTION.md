@@ -1,6 +1,6 @@
 # Homework 2: Intelligent Customer Support System
 
-## Summary
+## 📋 Summary
 
 Python/FastAPI backend + vanilla HTML/CSS/JS front-end for a customer support ticket system. Tickets can be created individually or bulk-imported from **CSV/JSON/XML** (per-record validation, one bad row never fails the batch). A deterministic rule-based classifier auto-assigns category/priority with confidence, reasoning, and matched keywords, runnable on create/import or on demand, with manual-override tracking. Storage is an in-memory, thread-safe store. The built-in web UI (served by FastAPI at `/`, no build step) covers listing/filtering, create/edit forms, ticket detail + classification view, auto-classify, and bulk import.
 
@@ -8,7 +8,7 @@ Python/FastAPI backend + vanilla HTML/CSS/JS front-end for a customer support ti
 
 **89 tests, 99.19% coverage** (required: >85%).
 
-## Tasks Completed
+## ✅ Tasks Completed
 
 - ✅ **Task 1: Multi-Format Ticket Import API** — full CRUD + filtering/pagination, CSV/JSON/XML import with per-record errors summary
 - ✅ **Task 2: Auto-Classification** — confidence/reasoning/keywords, manual override tracking, decision log
@@ -17,7 +17,7 @@ Python/FastAPI backend + vanilla HTML/CSS/JS front-end for a customer support ti
 - ✅ **Task 5: Front-End Application** *(added mid-project)* — vanilla JS SPA, responsive, backed live by the API
 - ✅ **Task 6: Integration & Performance Tests** *(renumbered from Task 5)* — lifecycle, concurrency, filtering, timing benchmarks
 
-## AI Tools Used — Cursor (Claude, Sonnet 5)
+## 🤖 AI Tools Used — Cursor (Claude, Sonnet 5)
 
 Planned and built phase-by-phase (Context-Model-Prompt framework), one phase per `TASKS.md` task:
 
@@ -27,7 +27,7 @@ Planned and built phase-by-phase (Context-Model-Prompt framework), one phase per
 - **Front-end verification**: agent drove the running app via browser automation (import data, open modals, resize to mobile) to capture real screenshots itself
 - Verified myself: ran the full suite after every phase, exercised the API via Swagger/curl, clicked through the live UI
 
-## Challenges Encountered & How They Were Addressed
+## ⚠️ Challenges Encountered & How They Were Addressed
 
 **FastAPI `AssertionError` on 204 responses** — `DELETE` implicitly tried to serialize a body; fixed with `response_model=None`.
 
@@ -39,7 +39,7 @@ Planned and built phase-by-phase (Context-Model-Prompt framework), one phase per
 
 **Windows-only run instructions** — `HOWTORUN.md`/`README.md` originally had PowerShell-only commands; added matching macOS/Linux equivalents for every step.
 
-## How to Verify
+## ▶️ How to Verify
 
 ```bash
 cd homework-2
@@ -56,7 +56,7 @@ curl -X POST "http://127.0.0.1:8000/tickets/import?auto_classify=true" -F "file=
 
 Open `http://127.0.0.1:8000/` to browse/filter tickets, view classification, and try bulk import from the UI. Full details in [`homework-2/HOWTORUN.md`](HOWTORUN.md).
 
-## Screenshots
+## 📸 Screenshots
 
 **AI workflow:**
 
@@ -78,7 +78,7 @@ Open `http://127.0.0.1:8000/` to browse/filter tickets, view classification, and
 
 ![99% test coverage report](https://raw.githubusercontent.com/konstantin-tkachenko-wildix/gen-ai-software-engineering/homework-2-submission/homework-2/docs/screenshots/test_coverage.png)
 
-## Key Architecture Decisions
+## 💡 Key Architecture Decisions
 
 - **FastAPI + Pydantic v2** — free validation, easy testing, auto-generated OpenAPI docs
 - **In-memory, thread-safe store** over a database — zero setup, fast tests; trade-off is data loss on restart (service layer only depends on the store interface, so swapping in a real DB is contained)
