@@ -1,0 +1,134 @@
+### Banking Transactions API — Sample Requests
+### Use with VS Code REST Client extension (humao.rest-client)
+
+@baseUrl = http://localhost:3000
+
+# ─────────────────────────────────────────
+# 1. Create a deposit
+# ─────────────────────────────────────────
+POST {{baseUrl}}/transactions
+Content-Type: application/json
+
+{
+  "type": "deposit",
+  "toAccount": "ACC-11111",
+  "amount": 1000.00,
+  "currency": "USD"
+}
+
+###
+
+# ─────────────────────────────────────────
+# 2. Create a withdrawal
+# ─────────────────────────────────────────
+POST {{baseUrl}}/transactions
+Content-Type: application/json
+
+{
+  "type": "withdrawal",
+  "fromAccount": "ACC-11111",
+  "amount": 150.00,
+  "currency": "USD"
+}
+
+###
+
+# ─────────────────────────────────────────
+# 3. Create a transfer
+# ─────────────────────────────────────────
+POST {{baseUrl}}/transactions
+Content-Type: application/json
+
+{
+  "type": "transfer",
+  "fromAccount": "ACC-11111",
+  "toAccount": "ACC-22222",
+  "amount": 250.00,
+  "currency": "USD"
+}
+
+###
+
+# ─────────────────────────────────────────
+# 4. Validation error — negative amount
+# ─────────────────────────────────────────
+POST {{baseUrl}}/transactions
+Content-Type: application/json
+
+{
+  "type": "deposit",
+  "toAccount": "ACC-11111",
+  "amount": -50,
+  "currency": "USD"
+}
+
+###
+
+# ─────────────────────────────────────────
+# 5. Validation error — invalid currency
+# ─────────────────────────────────────────
+POST {{baseUrl}}/transactions
+Content-Type: application/json
+
+{
+  "type": "deposit",
+  "toAccount": "ACC-11111",
+  "amount": 100,
+  "currency": "XYZ"
+}
+
+###
+
+# ─────────────────────────────────────────
+# 6. List all transactions
+# ─────────────────────────────────────────
+GET {{baseUrl}}/transactions
+
+###
+
+# ─────────────────────────────────────────
+# 7. Filter by account
+# ─────────────────────────────────────────
+GET {{baseUrl}}/transactions?accountId=ACC-11111
+
+###
+
+# ─────────────────────────────────────────
+# 8. Filter by type
+# ─────────────────────────────────────────
+GET {{baseUrl}}/transactions?type=transfer
+
+###
+
+# ─────────────────────────────────────────
+# 9. Filter by date range
+# ─────────────────────────────────────────
+GET {{baseUrl}}/transactions?from=2024-01-01&to=2024-12-31
+
+###
+
+# ─────────────────────────────────────────
+# 10. Get transaction by ID (replace <id> with a real UUID from step 1-3)
+# ─────────────────────────────────────────
+GET {{baseUrl}}/transactions/550e8400-e29b-41d4-a716-446655440000
+
+###
+
+# ─────────────────────────────────────────
+# 11. Get transaction by ID — 404 example
+# ─────────────────────────────────────────
+GET {{baseUrl}}/transactions/non-existent-id
+
+###
+
+# ─────────────────────────────────────────
+# 12. Get account balance
+# ─────────────────────────────────────────
+GET {{baseUrl}}/accounts/ACC-11111/balance
+
+###
+
+# ─────────────────────────────────────────
+# 13. Get account summary
+# ─────────────────────────────────────────
+GET {{baseUrl}}/accounts/ACC-11111/summary

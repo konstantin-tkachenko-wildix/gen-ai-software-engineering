@@ -1,0 +1,406 @@
+openapi: 3.0.3
+info:
+  title: Banking Transactions API
+  description: |
+    A minimal REST API for banking transactions.
+    Supports deposits, withdrawals, and transfers with in-memory storage.
+  version: 1.0.0
+  contact:
+    name: Konstantin Tkachenko
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+tags:
+  - name: Transactions
+    description: Create and query transactions
+  - name: Accounts
+    description: Account balance and summary
+
+components:
+  schemas:
+    TransactionType:
+      type: string
+      enum: [deposit, withdrawal, transfer]
+
+    TransactionStatus:
+      type: string
+      enum: [pending, completed, failed]
+
+    Transaction:
+      type: object
+      required: [id, amount, currency, type, timestamp, status]
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        fromAccount:
+          type: string
+          nullable: true
+          pattern: '^ACC-[A-Z0-9]{1,10}$'
+          example: "ACC-12345"
+        toAccount:
+          type: string
+          nullable: true
+          pattern: '^ACC-[A-Z0-9]{1,10}$'
+          example: "ACC-67890"
+        amount:
+          type: number
+          format: double
+          minimum: 0.01
+          example: 100.50
+        currency:
+          type: string
+          minLength: 3
+          maxLength: 3
+          description: ISO 4217 currency code
+          example: "USD"
+        type:
+          $ref: '#/components/schemas/TransactionType'
+        timestamp:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+        status:
+          $ref: '#/components/schemas/TransactionStatus'
+
+    CreateTransactionRequest:
+      type: object
+      required: [amount, currency, type]
+      properties:
+        fromAccount:
+          type: string
+          pattern: '^ACC-[A-Z0-9]{1,10}$'
+          description: Required for withdrawal and transfer
+          example: "ACC-12345"
+        toAccount:
+          type: string
+          pattern: '^ACC-[A-Z0-9]{1,10}$'
+          description: Required for deposit and transfer
+          example: "ACC-67890"
+        amount:
+          type: number
+          format: double
+          minimum: 0.01
+          example: 100.50
+        currency:
+          type: string
+          description: ISO 4217 currency code
+          example: "USD"
+        type:
+          $ref: '#/components/schemas/TransactionType'
+
+    ValidationErrorDetail:
+      type: object
+      required: [field, message]
+      properties:
+        field:
+          type: string
+          example: "amount"
+        message:
+          type: string
+          example: "Amount must be a positive number"
+
+    ValidationErrorResponse:
+      type: object
+      required: [error, details]
+      properties:
+        error:
+          type: string
+          example: "Validation failed"
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationErrorDetail'
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          example: "Transaction not found"
+
+    BalanceResponse:
+      type: object
+      required: [accountId, balance, currency]
+      properties:
+        accountId:
+          type: string
+          example: "ACC-12345"
+        balance:
+          type: number
+          format: double
+          example: 350.00
+        currency:
+          type: string
+          description: Currency code, or "MIXED" if multiple currencies
+          example: "USD"
+
+    SummaryResponse:
+      type: object
+      required: [accountId, totalDeposits, totalWithdrawals, transactionCount, mostRecentDate]
+      properties:
+        accountId:
+          type: string
+          example: "ACC-12345"
+        totalDeposits:
+          type: number
+          format: double
+          description: Sum of incoming deposits and transfer receipts
+          example: 1000.00
+        totalWithdrawals:
+          type: number
+          format: double
+          description: Sum of outgoing withdrawals and transfer sends
+          example: 250.00
+        transactionCount:
+          type: integer
+          example: 5
+        mostRecentDate:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+
+    RateLimitErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          example: "Too many requests"
+        retryAfter:
+          type: integer
+          example: 60
+
+  parameters:
+    accountId:
+      name: accountId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '^ACC-[A-Z0-9]{1,10}$'
+      example: "ACC-12345"
+
+    transactionId:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+      example: "550e8400-e29b-41d4-a716-446655440000"
+
+paths:
+  /transactions:
+    post:
+      tags: [Transactions]
+      summary: Create a new transaction
+      description: |
+        Creates a deposit, withdrawal, or transfer transaction.
+        - **deposit**: `toAccount` required; `fromAccount` optional
+        - **withdrawal**: `fromAccount` required; `toAccount` optional
+        - **transfer**: both `fromAccount` and `toAccount` required
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTransactionRequest'
+            examples:
+              deposit:
+                summary: Deposit example
+                value:
+                  type: deposit
+                  toAccount: "ACC-12345"
+                  amount: 500.00
+                  currency: "USD"
+              withdrawal:
+                summary: Withdrawal example
+                value:
+                  type: withdrawal
+                  fromAccount: "ACC-12345"
+                  amount: 100.00
+                  currency: "USD"
+              transfer:
+                summary: Transfer example
+                value:
+                  type: transfer
+                  fromAccount: "ACC-12345"
+                  toAccount: "ACC-67890"
+                  amount: 250.00
+                  currency: "EUR"
+      responses:
+        '201':
+          description: Transaction created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+        '400':
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '429':
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateLimitErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    get:
+      tags: [Transactions]
+      summary: List all transactions
+      description: Returns all transactions, optionally filtered by account, type, or date range.
+      parameters:
+        - name: accountId
+          in: query
+          required: false
+          schema:
+            type: string
+            pattern: '^ACC-[A-Z0-9]{1,10}$'
+          description: Filter by account (matches fromAccount or toAccount)
+          example: "ACC-12345"
+        - name: type
+          in: query
+          required: false
+          schema:
+            $ref: '#/components/schemas/TransactionType'
+          description: Filter by transaction type
+        - name: from
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
+          description: Start date (inclusive), format YYYY-MM-DD
+          example: "2024-01-01"
+        - name: to
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
+          description: End date (inclusive), format YYYY-MM-DD
+          example: "2024-01-31"
+      responses:
+        '200':
+          description: List of transactions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
+        '429':
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateLimitErrorResponse'
+
+  /transactions/{id}:
+    get:
+      tags: [Transactions]
+      summary: Get a transaction by ID
+      parameters:
+        - $ref: '#/components/parameters/transactionId'
+      responses:
+        '200':
+          description: Transaction found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+        '404':
+          description: Transaction not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateLimitErrorResponse'
+
+  /accounts/{accountId}/balance:
+    get:
+      tags: [Accounts]
+      summary: Get account balance
+      description: |
+        Computes the balance for an account by summing all completed transactions.
+        Returns 404 if no transactions reference the account.
+        Returns `"currency": "MIXED"` if the account has transactions in multiple currencies.
+      parameters:
+        - $ref: '#/components/parameters/accountId'
+      responses:
+        '200':
+          description: Account balance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BalanceResponse'
+              example:
+                accountId: "ACC-12345"
+                balance: 350.00
+                currency: "USD"
+        '404':
+          description: Account not found (no transactions)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateLimitErrorResponse'
+
+  /accounts/{accountId}/summary:
+    get:
+      tags: [Accounts]
+      summary: Get account transaction summary
+      description: |
+        Returns aggregated stats for an account.
+        Incoming transfers count toward `totalDeposits`; outgoing transfers count toward `totalWithdrawals`.
+      parameters:
+        - $ref: '#/components/parameters/accountId'
+      responses:
+        '200':
+          description: Account summary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SummaryResponse'
+              example:
+                accountId: "ACC-12345"
+                totalDeposits: 1000.00
+                totalWithdrawals: 250.00
+                transactionCount: 5
+                mostRecentDate: "2024-01-15T10:30:00.000Z"
+        '404':
+          description: Account not found (no transactions)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateLimitErrorResponse'

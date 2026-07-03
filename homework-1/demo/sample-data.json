@@ -1,0 +1,52 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "fromAccount": null,
+    "toAccount": "ACC-11111",
+    "amount": 1000.00,
+    "currency": "USD",
+    "type": "deposit",
+    "timestamp": "2024-01-10T09:00:00.000Z",
+    "status": "completed"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "fromAccount": "ACC-11111",
+    "toAccount": null,
+    "amount": 150.00,
+    "currency": "USD",
+    "type": "withdrawal",
+    "timestamp": "2024-01-12T14:30:00.000Z",
+    "status": "completed"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+    "fromAccount": "ACC-11111",
+    "toAccount": "ACC-22222",
+    "amount": 250.00,
+    "currency": "USD",
+    "type": "transfer",
+    "timestamp": "2024-01-15T10:00:00.000Z",
+    "status": "completed"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
+    "fromAccount": null,
+    "toAccount": "ACC-22222",
+    "amount": 500.00,
+    "currency": "EUR",
+    "type": "deposit",
+    "timestamp": "2024-01-18T08:45:00.000Z",
+    "status": "completed"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-efab-345678901234",
+    "fromAccount": "ACC-22222",
+    "toAccount": "ACC-33333",
+    "amount": 100.50,
+    "currency": "EUR",
+    "type": "transfer",
+    "timestamp": "2024-01-20T16:20:00.000Z",
+    "status": "completed"
+  }
+]
