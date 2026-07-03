@@ -1,0 +1,16 @@
+[
+  {
+    "customer_id": "cust-401",
+    "customer_email": "invalid-email",
+    "customer_name": "Kevin Smith",
+    "subject": "Test",
+    "description": "Too short"
+  },
+  {
+    "customer_id": "cust-402",
+    "customer_email": "laura@example.com",
+    "customer_name": "Laura White",
+    "subject": "",
+    "description": "Subject is empty which should fail min length validation on subject field."
+  }
+]

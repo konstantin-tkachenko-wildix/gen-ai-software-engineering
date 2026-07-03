@@ -1,0 +1,6 @@
+customer_id,customer_email,customer_name,subject,description,category,priority,status,tags,assigned_to,metadata_source,metadata_browser,metadata_device_type
+cust-9001,not-an-email,Invalid Email,Bad email test,This record has an invalid email address for negative testing purposes.,,,new,,,api,,
+cust-9002,shortdesc@example.com,Short Description,Description too short,Too short,,,new,,,api,,
+cust-9003,badcategory@example.com,Bad Category,Invalid category value,This record uses a category value that is not part of the allowed enum.,not_a_real_category,,new,,,api,,
+cust-9004,badpriority@example.com,Bad Priority,Invalid priority value,This record uses a priority value that is not part of the allowed enum.,,super-urgent,new,,,api,,
+,missingcustomerid@example.com,Missing Customer Id,Missing customer id,This record is missing the required customer_id field entirely.,,,new,,,api,,

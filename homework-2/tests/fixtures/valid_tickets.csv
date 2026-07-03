@@ -1,0 +1,6 @@
+customer_id,customer_email,customer_name,subject,description,category,priority,status,tags,assigned_to,metadata_source,metadata_browser,metadata_device_type
+cust-101,alice@example.com,Alice Smith,Cannot access my account,I am unable to log in to my account even after resetting my password.,account_access,urgent,new,login;urgent,,web_form,Chrome,desktop
+cust-102,bob@example.com,Bob Jones,App crashes on startup,The application crashes every time I try to open it on my laptop.,technical_issue,high,new,crash,agent-7,api,,
+cust-103,carol@example.com,Carol White,Refund for duplicate charge,I was charged twice for my monthly subscription and need a refund.,billing_question,medium,new,billing,,email,,
+cust-104,dave@example.com,Dave Brown,Add dark mode please,It would be great if the app supported a dark mode theme option.,feature_request,low,new,,,chat,,
+cust-105,erin@example.com,Erin Black,Button misaligned on settings page,"Steps to reproduce: open settings, resize window, the save button overlaps the cancel button.",bug_report,medium,new,ui,,web_form,Firefox,mobile

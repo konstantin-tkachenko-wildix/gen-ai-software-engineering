@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket id="1">
+    <customer_id>cust-701</customer_id>
+    <customer_email>alice@example.com</customer_email>
+    <customer_name lang="en">Alice</customer_name>
+    <subject>Edge case ticket with attributes</subject>
+    <description>Testing various XML flattening edge cases in a single record.</description>
+    <tags>billing;urgent</tags>
+    <assigned_to/>
+  </ticket>
+  <ticket>
+    <customer_id>cust-702</customer_id>
+    <customer_email>bob@example.com</customer_email>
+    <customer_name>Bob</customer_name>
+    <subject>Edge case ticket with empty tags</subject>
+    <description>This ticket has an empty self-closing tags element.</description>
+    <tags/>
+  </ticket>
+</tickets>

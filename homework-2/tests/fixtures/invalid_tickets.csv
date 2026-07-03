@@ -1,0 +1,4 @@
+customer_id,customer_email,customer_name,subject,description,category,priority,status,tags,assigned_to,metadata_source,metadata_browser,metadata_device_type
+cust-201,not-an-email,Frank Green,Short desc test,Too short,technical_issue,medium,new,,,api,,
+cust-202,grace@example.com,,Missing name field,This description is definitely long enough to pass validation.,other,low,new,,,api,,
+cust-203,henry@example.com,Henry Adams,Weird category value,This ticket has an invalid category value that does not exist.,not_a_real_category,medium,new,,,api,,

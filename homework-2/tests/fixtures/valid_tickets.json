@@ -1,0 +1,21 @@
+{
+  "tickets": [
+    {
+      "customer_id": "cust-301",
+      "customer_email": "ivan@example.com",
+      "customer_name": "Ivan Petrov",
+      "subject": "Password reset not working",
+      "description": "I requested a password reset but never received the email with the reset link.",
+      "tags": ["account_access", "urgent"],
+      "metadata": {"source": "web_form", "browser": "Edge", "device_type": "desktop"}
+    },
+    {
+      "customer_id": "cust-302",
+      "customer_email": "julia@example.com",
+      "customer_name": "Julia Roberts",
+      "subject": "Feature suggestion: export to PDF",
+      "description": "It would be really useful to export reports directly to PDF format from the dashboard.",
+      "tags": ["feature_request"]
+    }
+  ]
+}
