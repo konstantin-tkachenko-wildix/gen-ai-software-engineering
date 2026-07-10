@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>cust-601</customer_id>
+    <customer_email>not-an-email</customer_email>
+    <customer_name>Oscar Wild</customer_name>
+    <subject>Bad email test</subject>
+    <description>This record has an invalid email address for testing purposes.</description>
+  </ticket>
+</tickets>

@@ -1,0 +1,46 @@
+{
+  "tickets": [
+    {
+      "customer_id": "cust-9001",
+      "customer_email": "not-an-email",
+      "customer_name": "Invalid Email",
+      "subject": "Bad email test",
+      "description": "This record has an invalid email address for negative testing purposes.",
+      "status": "new"
+    },
+    {
+      "customer_id": "cust-9002",
+      "customer_email": "shortdesc@example.com",
+      "customer_name": "Short Description",
+      "subject": "Description too short",
+      "description": "Too short",
+      "status": "new"
+    },
+    {
+      "customer_id": "cust-9003",
+      "customer_email": "badcategory@example.com",
+      "customer_name": "Bad Category",
+      "subject": "Invalid category value",
+      "description": "This record uses a category value that is not part of the allowed enum.",
+      "category": "not_a_real_category",
+      "status": "new"
+    },
+    {
+      "customer_id": "cust-9004",
+      "customer_email": "badpriority@example.com",
+      "customer_name": "Bad Priority",
+      "subject": "Invalid priority value",
+      "description": "This record uses a priority value that is not part of the allowed enum.",
+      "priority": "super-urgent",
+      "status": "new"
+    },
+    {
+      "customer_id": "",
+      "customer_email": "missingcustomerid@example.com",
+      "customer_name": "Missing Customer Id",
+      "subject": "Missing customer id",
+      "description": "This record is missing the required customer_id field entirely.",
+      "status": "new"
+    }
+  ]
+}

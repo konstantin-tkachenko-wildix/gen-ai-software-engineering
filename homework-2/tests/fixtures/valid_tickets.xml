@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>cust-501</customer_id>
+    <customer_email>mike@example.com</customer_email>
+    <customer_name>Mike Ross</customer_name>
+    <subject>Invoice amount seems incorrect</subject>
+    <description>My latest invoice shows a charge that I do not recognize on my account.</description>
+    <tags><tag>billing</tag></tags>
+    <metadata><source>email</source></metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-502</customer_id>
+    <customer_email>nora@example.com</customer_email>
+    <customer_name>Nora Fields</customer_name>
+    <subject>Application throws error on save</subject>
+    <description>Every time I click save, the application throws an unexpected error message.</description>
+    <tags><tag>bug</tag><tag>urgent</tag></tags>
+  </ticket>
+</tickets>

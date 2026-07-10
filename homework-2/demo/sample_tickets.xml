@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>cust-1070</customer_id>
+    <customer_email>jasminebrown@example.com</customer_email>
+    <customer_name>John Brown</customer_name>
+    <subject>Regression in filter dropdown</subject>
+    <description>This looks like a regression: the filter dropdown stopped working after the latest release.</description>
+    <category>bug_report</category>
+    <priority>medium</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>billing</tag>
+      <tag>mobile</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Chrome</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1071</customer_id>
+    <customer_email>xprice@example.net</customer_email>
+    <customer_name>Alicia Gilmore</customer_name>
+    <subject>General inquiry about your company</subject>
+    <description>Just wanted to ask a general question about your company history.</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>closed</status>
+    <tags>
+      <tag>mobile</tag>
+      <tag>ui</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Firefox</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1072</customer_id>
+    <customer_email>wwoods@example.com</customer_email>
+    <customer_name>Sarah Ashley</customer_name>
+    <subject>Need to reset my password</subject>
+    <description>I would like to reset my password but the confirmation link keeps expiring. This is critical, our production is down and we can't access anything.</description>
+    <category>account_access</category>
+    <priority>urgent</priority>
+    <status>closed</status>
+    <assigned_to>agent-1</assigned_to>
+    <metadata>
+      <source>phone</source>
+      <browser>Edge</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1073</customer_id>
+    <customer_email>vmedina@example.net</customer_email>
+    <customer_name>Stephanie Freeman</customer_name>
+    <subject>Dashboard freezes when loading reports</subject>
+    <description>The dashboard hangs and never finishes loading the monthly report. This is critical, our production is down and we can't access anything.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>closed</status>
+    <assigned_to>agent-2</assigned_to>
+    <tags>
+      <tag>crash</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Chrome</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1074</customer_id>
+    <customer_email>ryan06@example.com</customer_email>
+    <customer_name>Rebecca Ramsey</customer_name>
+    <subject>Pricing for the enterprise plan</subject>
+    <description>Could you clarify the pricing details for the enterprise subscription tier? This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>billing_question</category>
+    <priority>low</priority>
+    <status>in_progress</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>login</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1075</customer_id>
+    <customer_email>ncalhoun@example.net</customer_email>
+    <customer_name>James Elliott</customer_name>
+    <subject>Please add support for bulk editing</subject>
+    <description>It would be great to add support for editing multiple records at once.</description>
+    <category>feature_request</category>
+    <priority>medium</priority>
+    <status>waiting_customer</status>
+    <metadata>
+      <source>api</source>
+      <browser>Edge</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1076</customer_id>
+    <customer_email>millerroy@example.com</customer_email>
+    <customer_name>David Murphy</customer_name>
+    <subject>Defect in date picker</subject>
+    <description>There is a defect in the date picker: selecting a past date shows the wrong month. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>bug_report</category>
+    <priority>low</priority>
+    <status>waiting_customer</status>
+    <assigned_to>agent-2</assigned_to>
+    <metadata>
+      <source>api</source>
+      <browser>Firefox</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1077</customer_id>
+    <customer_email>wmurphy@example.com</customer_email>
+    <customer_name>Trevor Fisher</customer_name>
+    <subject>General inquiry about your company</subject>
+    <description>Just wanted to ask a general question about your company history.</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>waiting_customer</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Chrome</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1078</customer_id>
+    <customer_email>ruizkaitlyn@example.org</customer_email>
+    <customer_name>Mrs. Marie Harrington DDS</customer_name>
+    <subject>Two-factor authentication not working</subject>
+    <description>My 2FA app codes are being rejected every time I try to sign in. This is critical, our production is down and we can't access anything.</description>
+    <category>account_access</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>mobile</tag>
+      <tag>ui</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Edge</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1079</customer_id>
+    <customer_email>herringjames@example.org</customer_email>
+    <customer_name>Cynthia Wells</customer_name>
+    <subject>Sync feature keeps failing</subject>
+    <description>The sync feature fails with an exception every time I try to run it. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>technical_issue</category>
+    <priority>low</priority>
+    <status>new</status>
+    <assigned_to>agent-1</assigned_to>
+    <metadata>
+      <source>email</source>
+      <browser>Edge</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1080</customer_id>
+    <customer_email>elliottjeffery@example.net</customer_email>
+    <customer_name>Jacob Obrien</customer_name>
+    <subject>Refund request for duplicate charge</subject>
+    <description>My credit card was charged twice for the same order, please refund it.</description>
+    <category>billing_question</category>
+    <priority>medium</priority>
+    <status>closed</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Safari</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1081</customer_id>
+    <customer_email>stricklandfrank@example.com</customer_email>
+    <customer_name>Alexander Collins</customer_name>
+    <subject>Enhancement idea for search</subject>
+    <description>An enhancement to add fuzzy search would really improve the experience.</description>
+    <category>feature_request</category>
+    <priority>medium</priority>
+    <status>resolved</status>
+    <assigned_to>agent-1</assigned_to>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Chrome</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1082</customer_id>
+    <customer_email>tsanders@example.org</customer_email>
+    <customer_name>Michael Burton</customer_name>
+    <subject>Incorrect totals on invoice page</subject>
+    <description>Steps to reproduce: add three items to the cart; the expected behavior is a correct total but it is wrong.</description>
+    <category>bug_report</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <tags>
+      <tag>login</tag>
+      <tag>billing</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1083</customer_id>
+    <customer_email>terrykevin@example.net</customer_email>
+    <customer_name>Barbara Riggs</customer_name>
+    <subject>Question about documentation</subject>
+    <description>I have a general question about where to find your API documentation. This is critical, our production is down and we can't access anything.</description>
+    <category>other</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <assigned_to>agent-1</assigned_to>
+    <tags>
+      <tag>ui</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Safari</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1084</customer_id>
+    <customer_email>reedross@example.com</customer_email>
+    <customer_name>Matthew Smith</customer_name>
+    <subject>Two-factor authentication not working</subject>
+    <description>My 2FA app codes are being rejected every time I try to sign in.</description>
+    <category>account_access</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <assigned_to>agent-3</assigned_to>
+    <metadata>
+      <source>api</source>
+      <browser>Firefox</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1085</customer_id>
+    <customer_email>gshort@example.com</customer_email>
+    <customer_name>Madison Poole</customer_name>
+    <subject>Sync feature keeps failing</subject>
+    <description>The sync feature fails with an exception every time I try to run it. This is critical, our production is down and we can't access anything.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>new</status>
+    <assigned_to>agent-2</assigned_to>
+    <tags>
+      <tag>refund</tag>
+      <tag>ui</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1086</customer_id>
+    <customer_email>ryangross@example.net</customer_email>
+    <customer_name>Robert Medina</customer_name>
+    <subject>Question about my last invoice</subject>
+    <description>I was charged twice for my subscription this month and need a refund.</description>
+    <category>billing_question</category>
+    <priority>medium</priority>
+    <status>resolved</status>
+    <metadata>
+      <source>chat</source>
+      <browser>Edge</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1087</customer_id>
+    <customer_email>umarshall@example.net</customer_email>
+    <customer_name>Samuel Rivas</customer_name>
+    <subject>Feature request: dark mode</subject>
+    <description>It would be great if the app supported a dark mode theme option. This is important and blocking our whole team, please handle asap.</description>
+    <category>feature_request</category>
+    <priority>high</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>refund</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1088</customer_id>
+    <customer_email>ramirezshannon@example.com</customer_email>
+    <customer_name>Mary Rogers</customer_name>
+    <subject>Incorrect totals on invoice page</subject>
+    <description>Steps to reproduce: add three items to the cart; the expected behavior is a correct total but it is wrong. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>bug_report</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1089</customer_id>
+    <customer_email>lrosales@example.com</customer_email>
+    <customer_name>Robert Peterson</customer_name>
+    <subject>General inquiry about your company</subject>
+    <description>Just wanted to ask a general question about your company history. This is critical, our production is down and we can't access anything.</description>
+    <category>other</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>ui</tag>
+      <tag>login</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Firefox</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1090</customer_id>
+    <customer_email>angela83@example.org</customer_email>
+    <customer_name>Jason Peters</customer_name>
+    <subject>Cannot log in to my account</subject>
+    <description>I forgot my password and the reset email never arrived, I'm locked out. This is important and blocking our whole team, please handle asap.</description>
+    <category>account_access</category>
+    <priority>high</priority>
+    <status>new</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1091</customer_id>
+    <customer_email>hannahbrewer@example.com</customer_email>
+    <customer_name>Alan Phillips</customer_name>
+    <subject>Getting a 500 error on checkout</subject>
+    <description>I keep getting an internal server error when trying to check out.</description>
+    <category>technical_issue</category>
+    <priority>medium</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>vip</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Firefox</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1092</customer_id>
+    <customer_email>tholt@example.net</customer_email>
+    <customer_name>Kara Schmidt</customer_name>
+    <subject>Question about my last invoice</subject>
+    <description>I was charged twice for my subscription this month and need a refund. This is important and blocking our whole team, please handle asap.</description>
+    <category>billing_question</category>
+    <priority>high</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>login</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Firefox</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1093</customer_id>
+    <customer_email>jbarajas@example.com</customer_email>
+    <customer_name>Jesse Parker</customer_name>
+    <subject>Enhancement idea for search</subject>
+    <description>An enhancement to add fuzzy search would really improve the experience. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>feature_request</category>
+    <priority>low</priority>
+    <status>new</status>
+    <assigned_to>agent-2</assigned_to>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1094</customer_id>
+    <customer_email>davidlee@example.org</customer_email>
+    <customer_name>Tiffany Vaughn</customer_name>
+    <subject>Save button misaligned</subject>
+    <description>Steps to reproduce: open settings, resize the window, the save button overlaps cancel. This is critical, our production is down and we can't access anything.</description>
+    <category>bug_report</category>
+    <priority>urgent</priority>
+    <status>resolved</status>
+    <assigned_to>agent-1</assigned_to>
+    <tags>
+      <tag>crash</tag>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Chrome</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1095</customer_id>
+    <customer_email>javierwashington@example.net</customer_email>
+    <customer_name>Paige Carlson</customer_name>
+    <subject>General inquiry about your company</subject>
+    <description>Just wanted to ask a general question about your company history.</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>closed</status>
+    <metadata>
+      <source>chat</source>
+      <browser>Edge</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1096</customer_id>
+    <customer_email>wallkenneth@example.com</customer_email>
+    <customer_name>Adrian Ferguson</customer_name>
+    <subject>Two-factor authentication not working</subject>
+    <description>My 2FA app codes are being rejected every time I try to sign in. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>account_access</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <assigned_to>agent-2</assigned_to>
+    <metadata>
+      <source>api</source>
+      <browser>Edge</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1097</customer_id>
+    <customer_email>brandon08@example.com</customer_email>
+    <customer_name>Beth Oneill</customer_name>
+    <subject>Dashboard freezes when loading reports</subject>
+    <description>The dashboard hangs and never finishes loading the monthly report. This is critical, our production is down and we can't access anything.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <assigned_to>agent-2</assigned_to>
+    <tags>
+      <tag>mobile</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1098</customer_id>
+    <customer_email>agarcia@example.net</customer_email>
+    <customer_name>John Peterson</customer_name>
+    <subject>Question about my last invoice</subject>
+    <description>I was charged twice for my subscription this month and need a refund. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>billing_question</category>
+    <priority>low</priority>
+    <status>new</status>
+    <assigned_to>agent-1</assigned_to>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-1099</customer_id>
+    <customer_email>kingmichelle@example.org</customer_email>
+    <customer_name>Jennifer Jones</customer_name>
+    <subject>Feature request: dark mode</subject>
+    <description>It would be great if the app supported a dark mode theme option. This is just a minor, cosmetic suggestion, not urgent at all.</description>
+    <category>feature_request</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <metadata>
+      <source>phone</source>
+      <browser>Safari</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+</tickets>

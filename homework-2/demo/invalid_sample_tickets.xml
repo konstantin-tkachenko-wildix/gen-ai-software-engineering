@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>cust-9001</customer_id>
+    <customer_email>not-an-email</customer_email>
+    <customer_name>Invalid Email</customer_name>
+    <subject>Bad email test</subject>
+    <description>This record has an invalid email address for negative testing purposes.</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <metadata>
+      <source>api</source>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-9002</customer_id>
+    <customer_email>shortdesc@example.com</customer_email>
+    <customer_name>Short Description</customer_name>
+    <subject>Description too short</subject>
+    <description>Too short</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <metadata>
+      <source>api</source>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-9003</customer_id>
+    <customer_email>badcategory@example.com</customer_email>
+    <customer_name>Bad Category</customer_name>
+    <subject>Invalid category value</subject>
+    <description>This record uses a category value that is not part of the allowed enum.</description>
+    <category>not_a_real_category</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <metadata>
+      <source>api</source>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-9004</customer_id>
+    <customer_email>badpriority@example.com</customer_email>
+    <customer_name>Bad Priority</customer_name>
+    <subject>Invalid priority value</subject>
+    <description>This record uses a priority value that is not part of the allowed enum.</description>
+    <category>other</category>
+    <priority>super-urgent</priority>
+    <status>new</status>
+    <metadata>
+      <source>api</source>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id></customer_id>
+    <customer_email>missingcustomerid@example.com</customer_email>
+    <customer_name>Missing Customer Id</customer_name>
+    <subject>Missing customer id</subject>
+    <description>This record is missing the required customer_id field entirely.</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <metadata>
+      <source>api</source>
+    </metadata>
+  </ticket>
+</tickets>

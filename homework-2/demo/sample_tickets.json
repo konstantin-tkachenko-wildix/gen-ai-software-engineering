@@ -1,0 +1,381 @@
+{
+  "tickets": [
+    {
+      "customer_id": "cust-1050",
+      "customer_email": "erik16@example.org",
+      "customer_name": "Courtney Velasquez",
+      "subject": "Unexpected charge on my account",
+      "description": "There is a billing charge on my account that I do not recognize at all.",
+      "category": "billing_question",
+      "priority": "medium",
+      "status": "resolved",
+      "tags": [
+        "refund",
+        "vip"
+      ],
+      "assigned_to": null,
+      "metadata": {
+        "source": "email",
+        "browser": "Edge",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1051",
+      "customer_email": "ybailey@example.org",
+      "customer_name": "Matthew Ross",
+      "subject": "Please add support for bulk editing",
+      "description": "It would be great to add support for editing multiple records at once. This is important and blocking our whole team, please handle asap.",
+      "category": "feature_request",
+      "priority": "high",
+      "status": "closed",
+      "tags": [
+        "refund",
+        "ui"
+      ],
+      "assigned_to": "agent-3",
+      "metadata": {
+        "source": "web_form",
+        "browser": "Safari",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1052",
+      "customer_email": "michelle45@example.net",
+      "customer_name": "Meghan Anthony",
+      "subject": "Incorrect totals on invoice page",
+      "description": "Steps to reproduce: add three items to the cart; the expected behavior is a correct total but it is wrong. This is just a minor, cosmetic suggestion, not urgent at all.",
+      "category": "bug_report",
+      "priority": "low",
+      "status": "closed",
+      "tags": [
+        "crash",
+        "ui"
+      ],
+      "assigned_to": "agent-2",
+      "metadata": {
+        "source": "chat",
+        "browser": "Firefox",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1053",
+      "customer_email": "sheila14@example.org",
+      "customer_name": "Victoria Johnson",
+      "subject": "Question about documentation",
+      "description": "I have a general question about where to find your API documentation. This is important and blocking our whole team, please handle asap.",
+      "category": "other",
+      "priority": "high",
+      "status": "new",
+      "tags": [
+        "crash"
+      ],
+      "assigned_to": null,
+      "metadata": {
+        "source": "email",
+        "browser": "Safari",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "cust-1054",
+      "customer_email": "yreed@example.com",
+      "customer_name": "William Wilson",
+      "subject": "Two-factor authentication not working",
+      "description": "My 2FA app codes are being rejected every time I try to sign in. This is important and blocking our whole team, please handle asap.",
+      "category": "account_access",
+      "priority": "high",
+      "status": "new",
+      "tags": [],
+      "assigned_to": null,
+      "metadata": {
+        "source": "chat",
+        "browser": "Chrome",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1055",
+      "customer_email": "jonathanfletcher@example.org",
+      "customer_name": "Renee Mcdaniel",
+      "subject": "Sync feature keeps failing",
+      "description": "The sync feature fails with an exception every time I try to run it. This is important and blocking our whole team, please handle asap.",
+      "category": "technical_issue",
+      "priority": "high",
+      "status": "resolved",
+      "tags": [
+        "mobile"
+      ],
+      "assigned_to": null,
+      "metadata": {
+        "source": "email",
+        "browser": "Chrome",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "cust-1056",
+      "customer_email": "michaeljones@example.net",
+      "customer_name": "Lisa Alvarado",
+      "subject": "Unexpected charge on my account",
+      "description": "There is a billing charge on my account that I do not recognize at all. This is important and blocking our whole team, please handle asap.",
+      "category": "billing_question",
+      "priority": "high",
+      "status": "in_progress",
+      "tags": [
+        "vip",
+        "urgent"
+      ],
+      "assigned_to": "agent-3",
+      "metadata": {
+        "source": "email",
+        "browser": "Chrome",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1057",
+      "customer_email": "cortezkevin@example.com",
+      "customer_name": "Erika Terry",
+      "subject": "Suggestion: export to PDF",
+      "description": "Please add support for exporting reports directly to PDF format. This is just a minor, cosmetic suggestion, not urgent at all.",
+      "category": "feature_request",
+      "priority": "low",
+      "status": "closed",
+      "tags": [
+        "crash",
+        "mobile"
+      ],
+      "assigned_to": "agent-2",
+      "metadata": {
+        "source": "phone",
+        "browser": "Edge",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1058",
+      "customer_email": "jamesortega@example.com",
+      "customer_name": "Stephanie Gilbert",
+      "subject": "Defect in date picker",
+      "description": "There is a defect in the date picker: selecting a past date shows the wrong month. This is important and blocking our whole team, please handle asap.",
+      "category": "bug_report",
+      "priority": "high",
+      "status": "resolved",
+      "tags": [
+        "refund"
+      ],
+      "assigned_to": null,
+      "metadata": {
+        "source": "api",
+        "browser": "Edge",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1059",
+      "customer_email": "richard04@example.com",
+      "customer_name": "Richard Lawson",
+      "subject": "General inquiry about your company",
+      "description": "Just wanted to ask a general question about your company history.",
+      "category": "other",
+      "priority": "medium",
+      "status": "resolved",
+      "tags": [],
+      "assigned_to": "agent-1",
+      "metadata": {
+        "source": "email",
+        "browser": "Safari",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1060",
+      "customer_email": "steven73@example.net",
+      "customer_name": "Steven Flynn",
+      "subject": "Need to reset my password",
+      "description": "I would like to reset my password but the confirmation link keeps expiring. This is critical, our production is down and we can't access anything.",
+      "category": "account_access",
+      "priority": "urgent",
+      "status": "in_progress",
+      "tags": [],
+      "assigned_to": null,
+      "metadata": {
+        "source": "chat",
+        "browser": "Firefox",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1061",
+      "customer_email": "donnacampbell@example.net",
+      "customer_name": "Frances Cardenas",
+      "subject": "Getting a 500 error on checkout",
+      "description": "I keep getting an internal server error when trying to check out. This is critical, our production is down and we can't access anything.",
+      "category": "technical_issue",
+      "priority": "urgent",
+      "status": "resolved",
+      "tags": [
+        "crash"
+      ],
+      "assigned_to": "agent-3",
+      "metadata": {
+        "source": "chat",
+        "browser": "Edge",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "cust-1062",
+      "customer_email": "emilywalker@example.org",
+      "customer_name": "Angel Riggs",
+      "subject": "Refund request for duplicate charge",
+      "description": "My credit card was charged twice for the same order, please refund it. This is just a minor, cosmetic suggestion, not urgent at all.",
+      "category": "billing_question",
+      "priority": "low",
+      "status": "resolved",
+      "tags": [
+        "urgent",
+        "mobile"
+      ],
+      "assigned_to": "agent-3",
+      "metadata": {
+        "source": "chat",
+        "browser": "Edge",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "cust-1063",
+      "customer_email": "gibsonolivia@example.net",
+      "customer_name": "Michael Snyder",
+      "subject": "Enhancement idea for search",
+      "description": "An enhancement to add fuzzy search would really improve the experience.",
+      "category": "feature_request",
+      "priority": "medium",
+      "status": "resolved",
+      "tags": [
+        "ui"
+      ],
+      "assigned_to": "agent-2",
+      "metadata": {
+        "source": "email",
+        "browser": "Safari",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1064",
+      "customer_email": "dylanwatts@example.org",
+      "customer_name": "Colleen Brock",
+      "subject": "Defect in date picker",
+      "description": "There is a defect in the date picker: selecting a past date shows the wrong month. This is critical, our production is down and we can't access anything.",
+      "category": "bug_report",
+      "priority": "urgent",
+      "status": "resolved",
+      "tags": [
+        "mobile"
+      ],
+      "assigned_to": null,
+      "metadata": {
+        "source": "chat",
+        "browser": "Firefox",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1065",
+      "customer_email": "pwilliams@example.org",
+      "customer_name": "Robert Contreras",
+      "subject": "General inquiry about your company",
+      "description": "Just wanted to ask a general question about your company history. This is just a minor, cosmetic suggestion, not urgent at all.",
+      "category": "other",
+      "priority": "low",
+      "status": "closed",
+      "tags": [
+        "urgent",
+        "vip"
+      ],
+      "assigned_to": "agent-2",
+      "metadata": {
+        "source": "email",
+        "browser": "Edge",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "cust-1066",
+      "customer_email": "stephanie79@example.net",
+      "customer_name": "Jessica Meadows",
+      "subject": "Cannot log in to my account",
+      "description": "I forgot my password and the reset email never arrived, I'm locked out.",
+      "category": "account_access",
+      "priority": "medium",
+      "status": "resolved",
+      "tags": [
+        "ui"
+      ],
+      "assigned_to": "agent-2",
+      "metadata": {
+        "source": "api",
+        "browser": "Safari",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1067",
+      "customer_email": "vmerritt@example.com",
+      "customer_name": "Paul Larsen",
+      "subject": "Dashboard freezes when loading reports",
+      "description": "The dashboard hangs and never finishes loading the monthly report. This is just a minor, cosmetic suggestion, not urgent at all.",
+      "category": "technical_issue",
+      "priority": "low",
+      "status": "waiting_customer",
+      "tags": [],
+      "assigned_to": "agent-2",
+      "metadata": {
+        "source": "web_form",
+        "browser": "Chrome",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "cust-1068",
+      "customer_email": "katie87@example.net",
+      "customer_name": "Jeremiah Reeves",
+      "subject": "Refund request for duplicate charge",
+      "description": "My credit card was charged twice for the same order, please refund it. This is critical, our production is down and we can't access anything.",
+      "category": "billing_question",
+      "priority": "urgent",
+      "status": "new",
+      "tags": [],
+      "assigned_to": null,
+      "metadata": {
+        "source": "email",
+        "browser": "Chrome",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "cust-1069",
+      "customer_email": "josephflores@example.net",
+      "customer_name": "Chris Reyes",
+      "subject": "Suggestion: export to PDF",
+      "description": "Please add support for exporting reports directly to PDF format. This is important and blocking our whole team, please handle asap.",
+      "category": "feature_request",
+      "priority": "high",
+      "status": "in_progress",
+      "tags": [
+        "billing"
+      ],
+      "assigned_to": "agent-3",
+      "metadata": {
+        "source": "email",
+        "browser": "Edge",
+        "device_type": "tablet"
+      }
+    }
+  ]
+}
