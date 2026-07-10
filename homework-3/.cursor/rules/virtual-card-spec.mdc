@@ -1,0 +1,45 @@
+---
+description: Virtual card specification conventions for homework-3 (spec-only, no implementation)
+globs: homework-3/**
+alwaysApply: false
+---
+
+# Virtual Card Spec Rules (homework-3)
+
+## Scope
+
+- This folder is **specification-only** for Homework 3. Do not generate implementation code unless explicitly requested outside this homework.
+- Primary source of truth: [specification.md](../specification.md).
+- FinTech Go implementation rules (when coding elsewhere): [AGENTS.md](../AGENTS.md).
+
+## Domain naming
+
+Use exact status enum values from the spec state machine:
+
+- `PENDING_ACTIVATION`, `ACTIVE`, `FROZEN_USER`, `FROZEN_FRAUD`, `EXPIRED`, `CLOSED`
+
+Do not introduce alternate names (`FROZEN`, `INACTIVE`, `DELETED`) in spec edits.
+
+Entity ID prefixes:
+
+- `card_`, `txn_`, `aud_`, `dsp_`, `wallet_`
+
+## Sensitive data in examples
+
+- Never use realistic PAN/CVV values (e.g. `4111 1111 1111 1111` with matching Luhn in docs).
+- Use masked form only: `**** **** **** 1234`.
+- Never put PINs, reveal tokens, or idempotency secrets in example JSON.
+
+## Spec editing conventions
+
+- Preserve traceability: user features → MO-* → task groups A–I.
+- New features require a mid-level objective, task(s), edge case row, and verification row.
+- Performance numbers must be labeled **assumed targets** unless backed by data.
+- Cross-cutting concerns (edge cases, verification, performance) stay in `specification.md`, not only in README.
+
+## What to avoid
+
+- Floating-point money examples.
+- Hard-deleting cards or audit records in spec language (use `CLOSED` / append-only audit).
+- Logging or storing full PAN/CVV outside vault in any proposed design.
+- Expanding scope into tokenization, business cards, or FX without explicit user approval.
